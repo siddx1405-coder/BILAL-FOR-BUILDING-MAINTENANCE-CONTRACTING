@@ -265,7 +265,18 @@ export default function App() {
 
       {/* Footer */}
       <footer style={{ borderTop: '1px solid var(--border-color)', padding: '2rem 1rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: '3rem' }}>
-        © BILAL FOR BUILDING MAINTENANCE & CONTRACTING. All rights reserved.
+        <p>© BILAL FOR BUILDING MAINTENANCE & CONTRACTING. All rights reserved.</p>
+        <p style={{ marginTop: '0.5rem' }}>
+          Made by{' '}
+          <a
+            href="https://www.xenosysweb.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '600' }}
+          >
+            Xenosysweb
+          </a>
+        </p>
       </footer>
 
       {/* Lightbox Modal */}
