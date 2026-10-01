@@ -264,19 +264,32 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border-color)', padding: '2rem 1rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: '3rem' }}>
-        <p>© BILAL FOR BUILDING MAINTENANCE & CONTRACTING. All rights reserved.</p>
-        <p style={{ marginTop: '0.5rem' }}>
-          Made by{' '}
-          <a
-            href="https://www.xenosysweb.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '600' }}
-          >
-            Xenosysweb
-          </a>
-        </p>
+      <footer style={{ borderTop: '1px solid var(--border-color)', padding: '2rem 1rem', color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '3rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', textAlign: 'center' }}>
+          <p>© {new Date().getFullYear()} BILAL FOR BUILDING MAINTENANCE & CONTRACTING. All rights reserved.</p>
+          
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
+            <span>Made by <strong style={{ color: 'var(--text-main)' }}>@Xenosys Qatar</strong></span>
+            <span>•</span>
+            <a
+              href="https://xenosysweb.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '600' }}
+            >
+              Xenosysweb.com
+            </a>
+            <span>•</span>
+            <a
+              href="https://wa.me/97470643918"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--accent-emerald)', textDecoration: 'none', fontWeight: '600' }}
+            >
+              WhatsApp 7064 3918
+            </a>
+          </div>
+        </div>
       </footer>
 
       {/* Lightbox Modal */}
