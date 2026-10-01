@@ -7,6 +7,14 @@ export default function App() {
   const [selectedItems, setSelectedItems] = useState([]);
   const [whatsappNote, setWhatsappNote] = useState('');
 
+  // Business Phone Number (for Contracting Company)
+  const businessPhone = '97430757174';
+  const formattedBusinessPhone = '+974 3075 7174';
+
+  // Xenosys Developer Number
+  const xenosysPhone = '97470643918';
+  const formattedXenosysPhone = '+974 7064 3918';
+
   const categories = [
     'All',
     'Doors & Windows',
@@ -33,7 +41,7 @@ export default function App() {
     e.preventDefault();
     const itemsText = selectedItems.length > 0 ? selectedItems.join(', ') : 'General Enquiry';
     const message = `Hello Bilal Contracting,%0A%0AI am interested in the following services/products:%0A*${itemsText}*%0A%0A*Additional Details:* ${whatsappNote || 'N/A'}`;
-    window.open(`https://wa.me/?text=${message}`, '_blank');
+    window.open(`https://wa.me/${businessPhone}?text=${message}`, '_blank');
   };
 
   return (
@@ -44,10 +52,54 @@ export default function App() {
           <div className="brand-title">BILAL FOR BUILDING MAINTENANCE & CONTRACTING</div>
           <div className="brand-arabic">بلال لصيانة المباني والمقاولات</div>
         </div>
-        <div className="nav-links">
+        <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#location">Location</a>
+          
+          {/* Direct Call Button */}
+          <a 
+            href={`tel:${businessPhone}`} 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              padding: '0.4rem 0.8rem',
+              borderRadius: '6px',
+              border: '1px solid var(--border-color)',
+              background: 'var(--bg-secondary)',
+              color: 'var(--text-main)',
+              textDecoration: 'none',
+              fontSize: '0.85rem',
+              fontWeight: 600,
+              transition: 'var(--transition-smooth)'
+            }}
+          >
+            📞 Call: {formattedBusinessPhone}
+          </a>
+
+          {/* Direct WhatsApp Button */}
+          <a 
+            href={`https://wa.me/${businessPhone}`} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              padding: '0.4rem 0.8rem',
+              borderRadius: '6px',
+              background: '#25D366',
+              color: '#ffffff',
+              textDecoration: 'none',
+              fontSize: '0.85rem',
+              fontWeight: 600,
+              transition: 'var(--transition-smooth)'
+            }}
+          >
+            💬 WhatsApp
+          </a>
+
           <a href="#contact" className="btn-primary">Enquire Now</a>
         </div>
       </nav>
@@ -214,7 +266,7 @@ export default function App() {
           </form>
         </section>
 
-        {/* Location Section - Updated with QARS Plate details */}
+        {/* Location Section */}
         <section id="location" style={{ background: 'var(--bg-secondary)', padding: '2rem', borderRadius: '16px', border: '1px solid var(--border-color)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', alignItems: 'center' }}>
             <div>
@@ -281,12 +333,12 @@ export default function App() {
             </a>
             <span>•</span>
             <a
-              href="https://wa.me/97470643918"
+              href={`https://wa.me/${xenosysPhone}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: 'var(--accent-emerald)', textDecoration: 'none', fontWeight: '600' }}
             >
-              WhatsApp 7064 3918
+              WhatsApp {formattedXenosysPhone}
             </a>
           </div>
         </div>
