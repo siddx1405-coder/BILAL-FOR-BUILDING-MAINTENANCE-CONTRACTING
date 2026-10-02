@@ -320,27 +320,7 @@ export default function App() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', textAlign: 'center' }}>
           <p>© {new Date().getFullYear()} BILAL FOR BUILDING MAINTENANCE & CONTRACTING. All rights reserved.</p>
           
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
-            <span>Made by <strong style={{ color: 'var(--text-main)' }}>@Xenosys Qatar</strong></span>
-            <span>•</span>
-            <a
-              href="https://xenosysweb.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: '600' }}
-            >
-              Xenosysweb.com
-            </a>
-            <span>•</span>
-            <a
-              href={`https://wa.me/${xenosysPhone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: 'var(--accent-emerald)', textDecoration: 'none', fontWeight: '600' }}
-            >
-              WhatsApp {formattedXenosysPhone}
-            </a>
-          </div>
+          
         </div>
       </footer>
 
