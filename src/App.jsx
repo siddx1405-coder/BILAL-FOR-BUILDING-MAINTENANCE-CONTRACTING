@@ -11,9 +11,10 @@ export default function App() {
   const businessPhone = '97430757174';
   const formattedBusinessPhone = '+974 3075 7174';
 
-  // Xenosys Developer Number
+  // Xenosys Developer Information
   const xenosysPhone = '97470643918';
   const formattedXenosysPhone = '+974 7064 3918';
+  const xenosysWebsite = 'https://xenosysweb.com'; // Replace with exact URL if different
 
   const categories = [
     'All',
@@ -50,7 +51,10 @@ export default function App() {
       <nav className="navbar">
         <div>
           <div className="brand-title">BILAL FOR BUILDING MAINTENANCE & CONTRACTING</div>
-          <div className="brand-arabic">بلال لصيانة المباني والمقاولات</div>
+          <div className="brand-arabic" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+            <span>بلال لصيانة المباني والمقاولات</span>
+            <span style={{ fontSize: '0.75rem', opacity: 0.85, fontWeight: 500 }}>• C.R. No: 251657</span>
+          </div>
         </div>
         <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <a href="#services">Services</a>
@@ -107,7 +111,7 @@ export default function App() {
       {/* Hero Section */}
       <header className="hero">
         <span style={{ color: 'var(--accent-gold)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase' }}>
-          Quality Construction & Fabrication
+          Quality Construction & Fabrication • CR No: 251657
         </span>
         <h1>Building Maintenance & Premium Contracting</h1>
         <p>
@@ -319,8 +323,29 @@ export default function App() {
       <footer style={{ borderTop: '1px solid var(--border-color)', padding: '2rem 1rem', color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '3rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', textAlign: 'center' }}>
           <p>© {new Date().getFullYear()} BILAL FOR BUILDING MAINTENANCE & CONTRACTING. All rights reserved.</p>
-          
-          
+          <p style={{ fontSize: '0.8rem', opacity: 0.8 }}>C.R. No: 251657 • Registered Commercial Registration, State of Qatar</p>
+
+          {/* Developer Credit */}
+          <div style={{ marginTop: '0.5rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <span>Designed & Developed by</span>
+            <a 
+              href={xenosysWebsite} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: 'var(--accent-gold)', textDecoration: 'none', fontWeight: 700 }}
+            >
+              @Xenosys Qatar
+            </a>
+            <span>•</span>
+            <a 
+              href={`https://wa.me/${xenosysPhone}?text=${encodeURIComponent('Hello Xenosys, I am reaching out from the Bilal Contracting website.')}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ color: '#25D366', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}
+            >
+              💬 WhatsApp: {formattedXenosysPhone}
+            </a>
+          </div>
         </div>
       </footer>
 
