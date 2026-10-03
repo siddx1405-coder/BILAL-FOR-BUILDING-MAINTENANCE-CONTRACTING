@@ -7,14 +7,14 @@ export default function App() {
   const [selectedItems, setSelectedItems] = useState([]);
   const [whatsappNote, setWhatsappNote] = useState('');
 
-  // Business Phone Number (for Contracting Company)
+  // Business Phone Number (Updated to 30757174)
   const businessPhone = '97430757174';
   const formattedBusinessPhone = '+974 3075 7174';
 
   // Xenosys Developer Information
   const xenosysPhone = '97470643918';
   const formattedXenosysPhone = '+974 7064 3918';
-  const xenosysWebsite = 'https://xenosysweb.com'; // Replace with exact URL if different
+  const xenosysWebsite = 'https://xenosysweb.com';
 
   const categories = [
     'All',
